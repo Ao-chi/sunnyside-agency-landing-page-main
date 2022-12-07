@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    transition: ease-in-out 0.4s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    @include Fraunces-font;
+    font-weight: font-weight(font-bolder);
+    padding: 0 $p-1;
+    margin-bottom: 0.5rem;
+    color: $very-dark-blue;
+}
+
+p {
+    font-size: font-size(font-18);
+    font-weight: font-weight(font-normal);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+    color: $very-dark-grayish;
+}
+
+a {
+    font-weight: font-weight(font-bold);
+    color: $white;
+}

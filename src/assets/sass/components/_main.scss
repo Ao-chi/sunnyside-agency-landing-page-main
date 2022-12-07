@@ -1,0 +1,304 @@
+@import "../abstracts/functions";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+main {
+    .grid-container {
+        display: grid;
+        grid-template-areas: "egg" "c2" "cup" "c3" "berry" "orange";
+
+        .egg {
+            grid-area: egg;
+        }
+
+        .c2 {
+            grid-area: c2;
+        }
+
+        .cup {
+            grid-area: cup;
+        }
+        .berry {
+            grid-area: berry;
+        }
+
+        .orange {
+            grid-area: orange;
+        }
+
+        .grid-items {
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+            .desc {
+                text-align: center;
+                padding: $p-3 $p-1_5;
+
+                h2 {
+                    font-size: $h3-font-size;
+                    padding: 0 $p-1;
+                }
+
+                p {
+                    padding: $p-1_5 0;
+                }
+
+                .learn_more {
+                    position: relative;
+                    font-size: font-size(font-16);
+
+                    .yellow,
+                    .red {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            border-radius: 10px;
+                            height: 6px;
+                            bottom: 0;
+                            width: 100%;
+                            left: 0;
+                            z-index: -1;
+                        }
+                    }
+                    .yellow {
+                        &::after {
+                            background: lighten($yellow, 33%);
+                        }
+
+                        &:hover {
+                            &::after {
+                                background: $yellow;
+                            }
+                        }
+                    }
+                    .red {
+                        &::after {
+                            background: lighten($soft-red, 20%);
+                        }
+
+                        &:hover {
+                            &::after {
+                                background: $soft-red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.grid-container {
+    height: 100%;
+
+    .grid-items {
+        height: 100%;
+        .image-only {
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            margin-top: $p-3;
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+        }
+        .image-container {
+            height: 100%;
+
+            .image-overlays {
+                height: 100%;
+                width: 100%;
+            }
+
+            .d-none {
+                display: none;
+            }
+
+            .d-block {
+                display: block;
+            }
+        }
+    }
+}
+
+.testimonialSec {
+    padding: 5%;
+
+    h4 {
+        font-size: font-size(font-24);
+        color: $grayish-blue;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        padding: $p-3 0 0 0;
+    }
+}
+
+.testimonials-container {
+    .card {
+        padding: $p-1;
+        text-align: center;
+
+        .card-profile {
+            padding: $p-1_5;
+            .profile {
+                clip-path: circle(50% at 50% 50%);
+                width: 4rem;
+            }
+        }
+    }
+
+    .card-name {
+        h5 {
+            font-size: font-size(font-20);
+        }
+        p {
+            color: $grayish-blue;
+            font-size: font-size(font-14);
+        }
+    }
+}
+
+.image-gallery {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+        width: 100%;
+
+        .img-items {
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
+
+            .image-only {
+                max-height: 100%;
+                width: 100%;
+
+                vertical-align: bottom;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+            .d-block {
+                display: block;
+            }
+            .d-none {
+                display: none;
+            }
+        }
+    }
+}
+
+@include breakpoint(sm, min) {
+    main {
+        .grid-container {
+            //grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "c2  egg"
+                "cup  c3"
+                "berry orange";
+
+            .grid-items {
+                .grid-inner-item {
+                    height: inherit;
+                    @include display-flex(center, center);
+                    .desc {
+                        text-align: left;
+                        width: 80%;
+
+                        h2 {
+                            font-size: $h2-font-size;
+                            padding: 0;
+                        }
+
+                        .content {
+                            text-align: center;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .grid-inner-item {
+                        .desc {
+                            padding-left: 4rem;
+                            padding-right: $p-3;
+                        }
+                    }
+                }
+                &:nth-child(4) {
+                    .grid-inner-item {
+                        .desc {
+                            padding-right: 4rem;
+                            padding-left: $p-3;
+                        }
+                    }
+                }
+                .overlay {
+                    @include display-flex(center, center);
+                    width: 100%;
+                    .content {
+                        max-width: 390px;
+                    }
+                }
+                .image-container {
+                    .d-none {
+                        display: block;
+                    }
+
+                    .d-block {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .testimonialSec {
+        h4 {
+            padding: $p-3 0;
+        }
+    }
+
+    .testimonials-container {
+        padding-bottom: $p-3;
+        @include display-flex(center, center);
+
+        .card {
+            max-width: 400px;
+            padding: $p-1_5;
+
+            .card-profile {
+                margin-bottom: $p-1_5;
+                .profile {
+                    clip-path: circle(50% at 50% 50%);
+                    width: 4rem;
+                }
+            }
+
+            .testimony {
+                padding-bottom: $p-3;
+            }
+        }
+    }
+    .image-gallery {
+        .container {
+            grid-template-columns: repeat(4, 1fr);
+            .img-items {
+                height: 100%;
+
+                .d-block {
+                    display: none;
+                }
+                .d-none {
+                    display: block;
+                }
+            }
+        }
+    }
+}

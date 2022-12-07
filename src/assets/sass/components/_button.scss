@@ -1,0 +1,15 @@
+@import "../abstracts/functions";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../base/fonts";
+
+button {
+    @include Fraunces-font;
+    font-weight: font-weight(font-bolder);
+    font-variation-settings: "wght" 850;
+    text-transform: uppercase;
+    border: none;
+    background: transparent;
+    color: $very-dark-blue;
+    cursor: pointer;
+}
