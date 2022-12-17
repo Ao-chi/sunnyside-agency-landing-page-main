@@ -39,22 +39,22 @@ const Footer = () => {
                 <div className="social">
                     <ul className="social__links">
                         <li>
-                            <a href="#Facebook">
+                            <a href="#Facebook" aria-label="facebook">
                                 <FontAwesomeIcon className="social--icon" icon={faFacebookSquare} />
                             </a>
                         </li>
                         <li>
-                            <a href="#instagram">
+                            <a href="#instagram" aria-label="instagram">
                                 <FontAwesomeIcon className="social--icon" icon={faInstagram} />
                             </a>
                         </li>
                         <li>
-                            <a href="#twitter">
+                            <a href="#twitter" aria-label="twitter">
                                 <FontAwesomeIcon className="social--icon" icon={faTwitter} />
                             </a>
                         </li>
                         <li>
-                            <a href="#pinterest">
+                            <a href="#pinterest" aria-label="pinterest">
                                 <FontAwesomeIcon className="social--icon" icon={faPinterest} />
                             </a>
                         </li>

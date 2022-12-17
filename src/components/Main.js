@@ -87,7 +87,7 @@ const Main = () => {
                 </div>
             </section>
             <section className="testimonialSec">
-                <h4>Client testimonials</h4>
+                <h2>Client testimonials</h2>
                 <div className="testimonials-container">
                     <div className="card">
                         <div className="card-profile">
