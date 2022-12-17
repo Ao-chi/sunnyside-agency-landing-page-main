@@ -97,7 +97,7 @@ const Main = () => {
                             <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
                         </div>
                         <div className="card-name">
-                            <h5>Emily R.</h5>
+                            <h3>Emily R.</h3>
                             <p> Marketing Director</p>
                         </div>
                     </div>
@@ -112,7 +112,7 @@ const Main = () => {
                             </p>
                         </div>
                         <div className="card-name">
-                            <h5> Thomas S.</h5>
+                            <h3> Thomas S.</h3>
                             <p> Chief Operating Officer</p>
                         </div>
                     </div>
@@ -124,7 +124,7 @@ const Main = () => {
                             <p> Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
                         </div>
                         <div className="card-name">
-                            <h5> Jennie F.</h5>
+                            <h3> Jennie F.</h3>
                             <p> Business Owner</p>
                         </div>
                     </div>

@@ -14,7 +14,7 @@ const Header = () => {
         <header>
             <div className="nav-wrapper">
                 <div className="icon">
-                    <a href="/">
+                    <a href="/" aria-label="logo">
                         <img src={icon} alt="icon brand" />
                     </a>
                 </div>
