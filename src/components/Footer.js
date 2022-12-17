@@ -9,9 +9,9 @@ import { faFacebookSquare, faInstagram, faPinterest, faTwitter } from "@fortawes
 
 const Footer = () => {
     return (
-        <footer>
-            <section className="footer-container">
-                <div className="logo">
+        <footer className="footer">
+            <div className="footer__container">
+                <div className="footer__logo">
                     {/*<img src={icon1} alt="brand" />*/}
                     <a href="/">
                         <svg width="200" height="50" viewBox="30 0 60 40" xmlns="http://www.w3.org/2000/svg">
@@ -36,31 +36,31 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="social-links">
-                    <ul className="socials">
+                <div className="social">
+                    <ul className="social__links">
                         <li>
                             <a href="#Facebook">
-                                <FontAwesomeIcon className="social-icon" icon={faFacebookSquare} />
+                                <FontAwesomeIcon className="social--icon" icon={faFacebookSquare} />
                             </a>
                         </li>
                         <li>
                             <a href="#instagram">
-                                <FontAwesomeIcon className="social-icon" icon={faInstagram} />
+                                <FontAwesomeIcon className="social--icon" icon={faInstagram} />
                             </a>
                         </li>
                         <li>
                             <a href="#twitter">
-                                <FontAwesomeIcon className="social-icon" icon={faTwitter} />
+                                <FontAwesomeIcon className="social--icon" icon={faTwitter} />
                             </a>
                         </li>
                         <li>
                             <a href="#pinterest">
-                                <FontAwesomeIcon className="social-icon" icon={faPinterest} />
+                                <FontAwesomeIcon className="social--icon" icon={faPinterest} />
                             </a>
                         </li>
                     </ul>
                 </div>
-            </section>
+            </div>
         </footer>
     );
 };

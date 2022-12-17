@@ -130,7 +130,7 @@ const Main = () => {
                     </div>
                 </div>
             </section>
-            <section className="image-gallery">
+            <div className="image-gallery">
                 <div className="container">
                     <div className="img-items">
                         <img className="image-only d-block" src={bottle} alt="milk bottles" />
@@ -149,7 +149,7 @@ const Main = () => {
                         <img className="image-only d-none" src={sugar1} alt="sugar cubes" />
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
     );
 };
